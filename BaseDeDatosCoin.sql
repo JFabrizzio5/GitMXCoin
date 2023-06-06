@@ -24,15 +24,17 @@ CREATE TABLE archivos (
   id INT PRIMARY KEY AUTO_INCREMENT,
   nombre VARCHAR(100) NOT NULL,
   descripcion TEXT,
-  ruta_almacenamiento VARCHAR(255) NOT NULL,
   id_usuario_propietario INT NOT NULL,
   precio_criptomonedas DECIMAL(10, 2) NOT NULL DEFAULT 0,
   fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  imagen_proyecto LONGBLOB,
+  Proyecto LONGBLOB,
   FOREIGN KEY (id_usuario_propietario) REFERENCES usuarios(id)
 );
 
 
 
 
-select * from archivos1;
+
+select * from archivos;
 select * from usuarios;
